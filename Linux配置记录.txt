@@ -1,0 +1,74 @@
+安装Gdal
+
+sudo apt-get install gdal-bin
+
+查找占用端口号
+
+lsof -i:9002
+
+sudo kill -9 465456  
+
+开启openssh
+
+安装SSH服务（如果尚未安装）：
+sudo apt-get update
+sudo apt-get install openssh-server
+
+启动SSH服务：
+sudo systemctl start ssh
+
+使SSH服务开机自启：
+sudo systemctl enable ssh
+
+检查SSH服务状态：
+sudo systemctl status ssh
+
+如果SSH服务已经运行，你可能只需要执行步骤2和3来确保它随系统启动而自动启动。
+如果你需要进一步配置SSH服务（例如更改默认端口或允许/禁用特定的认证方法），
+你可以编辑配置文件 /etc/ssh/sshd_config 并重启SSH服务来应用更改：
+sudo systemctl restart ssh
+
+查看系统架构
+
+uname -m
+
+lsb_release -a
+
+cat /proc/version
+
+查看是否挂载
+
+lsblk
+
+格式化硬盘
+
+sudo mkfs.ext4 /dev/sda5
+
+查看磁盘占用
+
+df -h
+
+
+配置环境变量
+1.打开终端（命令行界面）
+
+2.使用以下命令打开环境变量文件，比如 ~/.bashrc：
+
+vi ~/.bashrc
+
+3.在文件末尾添加需要设置的环境变量，例如：
+
+export ALIBABA_CLOUD_ACCESS_KEY_ID=<你的access_key_id>
+export ALIBABA_CLOUD_ACCESS_KEY_SECRET=<你的access_key_secret>
+
+
+4.按下“Esc”键，输入“:wq”保存并退出。
+
+5.使用以下命令使修改后的环境变量生效：
+
+source ~/.bashrc
+
+6.如果能够正确输出相应的路径，则说明环境变量已经设置成功。
+
+echo $ALIBABA_CLOUD_ACCESS_KEY_ID
+echo $ALIBABA_CLOUD_ACCESS_KEY_SECRET
