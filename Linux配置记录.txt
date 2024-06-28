@@ -72,3 +72,25 @@ source ~/.bashrc
 
 echo $ALIBABA_CLOUD_ACCESS_KEY_ID
 echo $ALIBABA_CLOUD_ACCESS_KEY_SECRET
+
+nat123
+
+命令行启动
+
+mono nat123linux.sh 
+
+服务启动
+
+mono  nat123linux.sh service &
+
+开机启动服务方式启动
+
+sudo systemctl start rc-local  rc-local为ubuntu开机启动项里面的服务配置文件
+
+sudo systemctl restart rc-local
+
+sudo systemctl stop rc-local
+
+sudo systemctl reload rc-local
+
+nat123  账号密码： zhishiqu  wanglei666
