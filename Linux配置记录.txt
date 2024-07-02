@@ -94,3 +94,14 @@ sudo systemctl stop rc-local
 sudo systemctl reload rc-local
 
 nat123  账号密码： zhishiqu  wanglei666
+
+
+nginx 服务启动
+
+sudo systemctl start nginx
+
+stop
+
+reload
+
+status
