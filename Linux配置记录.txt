@@ -105,3 +105,14 @@ stop
 reload
 
 status
+
+python安装包路径
+
+~/.local/lib/python3.8/site-packages/
+
+
+gunicorn -w 5 -b 0.0.0.0:8066 -t 120  --certfile=zhishiqu.top_public.crt --keyfile=zhishiqu.top.key app:app
+
+ps -ef | grep gunicorn
+
+kill
